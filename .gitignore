@@ -2,7 +2,7 @@
 node_modules
 .husky
 /build
-
+wyy.code-workspace
 
 # local env files
 .env.local
