@@ -1,0 +1,21 @@
+export const rules = {
+  name:[{
+    required:true,
+    message:'帐号不能为空',
+    trigger:'blur'
+  },
+  {
+    pattern:/^[a-z0-9]{5,10}$/,
+    message:'帐号格式不正确',
+    trigger:'blur'
+  }],
+  password:[{
+    required:true,
+    message:'密码不能为空',
+    trigger:'blur'
+  },{
+    pattern:/^[a-z0-9]{3,19}$/,
+    message:'帐号格式不正确',
+    trigger:'blur'
+  }]
+}

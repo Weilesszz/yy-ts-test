@@ -1,24 +1,39 @@
 {
+  // 编译时选项
   "compilerOptions": {
+    // 目标代码：es5/6/7，不需要因为用了babel
     "target": "esnext",
+    // 目标的模块化 同babel,自己写的话可以写umd
     "module": "esnext",
-    "strict": true,
+    // 严格模式
+    "strict": false,
+    // 对jsx做什么处理，这里是不转换 也已经用了babel
     "jsx": "preserve",
+    // 导入辅助
     "importHelpers": true,
+    // 模块解析方式 一般是node import
     "moduleResolution": "node",
+    // 跳过检查整个库
     "skipLibCheck": true,
+    // esmodule 和 commen能不能混合使用
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    // 要不要生成映射文件
     "sourceMap": true,
+    // 文件路径解析时的基本路径
     "baseUrl": ".",
+    // 解析使用的类型
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "element-plus/global"
     ],
+    // 路径解析：@=src，找不到则找第二个
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
+    // 允许使用的库的类型(proxy/window)
     "lib": [
       "esnext",
       "dom",
@@ -26,6 +41,7 @@
       "scripthost"
     ]
   },
+  // 会参与解析的文件
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
